@@ -3,11 +3,11 @@ import municipioController from "../controllers/municipiosController";
 
 const router = Router();
 
-router.post("/", municipioController.createMunicipio);
-router.get("/", municipioController.getAllMunicipios);
-router.get("/:id", municipioController.getMunicipio);
-router.put("/:id", municipioController.updateMunicipio);
-router.patch("/:id", municipioController.partialUpdateMunicipio as any);
-router.delete("/:id", municipioController.deleteMunicipio);
+router.post("/municipios", municipioController.createMunicipio);
+router.get("/municipios", municipioController.getAllMunicipios);
+router.get("/municipios/:id", municipioController.getMunicipio);
+router.put("/municipios/:id", municipioController.updateMunicipio);
+router.patch("/municipios/:id", municipioController.partialUpdateMunicipio as any);
+router.delete("/municipios/:id", municipioController.deleteMunicipio);
 
 export default router;

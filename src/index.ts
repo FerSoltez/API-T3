@@ -2,6 +2,8 @@ import express, { Application, Request, Response, NextFunction } from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import usuariosRoutes from './routes/usariosRoutes';
+import localidadesRoutes from './routes/localidadesRoutes';
+import municipiosRoutes from './routes/municipiosRoutes';
 
 dotenv.config();
 const app: Application = express();
@@ -12,6 +14,8 @@ app.use(express.json());
 
 // Routes
 app.use("/api", usuariosRoutes);
+app.use("/api", localidadesRoutes);
+app.use("/api", municipiosRoutes);
 
 // Ruta de prueba
 app.get("/", (req: Request, res: Response, next: NextFunction) => {

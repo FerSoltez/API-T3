@@ -7,6 +7,8 @@ const express_1 = __importDefault(require("express"));
 const dotenv_1 = __importDefault(require("dotenv"));
 const cors_1 = __importDefault(require("cors"));
 const usariosRoutes_1 = __importDefault(require("./routes/usariosRoutes"));
+const localidadesRoutes_1 = __importDefault(require("./routes/localidadesRoutes"));
+const municipiosRoutes_1 = __importDefault(require("./routes/municipiosRoutes"));
 dotenv_1.default.config();
 const app = (0, express_1.default)();
 // Middlewares  
@@ -14,6 +16,8 @@ app.use((0, cors_1.default)());
 app.use(express_1.default.json());
 // Routes
 app.use("/api", usariosRoutes_1.default);
+app.use("/api", localidadesRoutes_1.default);
+app.use("/api", municipiosRoutes_1.default);
 // Ruta de prueba
 app.get("/", (req, res, next) => {
     res.send("¡API en funcionamiento!");

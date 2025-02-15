@@ -1,4 +1,4 @@
-import { Request, Response, NextFunction } from "express";
+import { Request, Response } from "express";
 import Usuarios from "../models/usuarios";
 
 const usuarioController = {
@@ -60,7 +60,7 @@ const usuarioController = {
     }
   },
 
-  partialUpdateUsuario: async (req: Request, res: Response, next: NextFunction) => {    try {
+  partialUpdateUsuario: async (req: Request, res: Response) => {    try {
       const usuario = await Usuarios.findByPk(req.params.id);
       if (!usuario) {
         return res.status(404).json({ message: "Usuario no encontrado" });

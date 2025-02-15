@@ -75,7 +75,7 @@ const usuarioController = {
             res.status(500).json({ error: error.message });
         }
     }),
-    partialUpdateUsuario: (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
+    partialUpdateUsuario: (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         try {
             const usuario = yield usuarios_1.default.findByPk(req.params.id);
             if (!usuario) {

@@ -1,6 +1,6 @@
 import { DataTypes, Model } from "sequelize";
-import { sequelize } from "../config/database";
-import Localidad from "./localidades";
+import { sequelize } from '../config/database';
+import Localidad from './localidades';
 
 interface MunicipioAttributes {
   id: number;

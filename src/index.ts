@@ -1,7 +1,7 @@
 import express, { Application, Request, Response, NextFunction } from "express";
 import dotenv from "dotenv";
 import cors from "cors";
-import usuariosRoutes from './routes/usariosRoutes';
+import usuariosRoutes from './routes/usuariosRoutes';
 import localidadesRoutes from './routes/localidadesRoutes';
 import municipiosRoutes from './routes/municipiosRoutes';
 
